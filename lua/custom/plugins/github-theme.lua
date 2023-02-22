@@ -7,6 +7,7 @@ return {
   config = function()
     require('github-theme').setup({
       theme_style = "dark",
+      version = "*",
       function_style = "italic",
       sidebars = { "qf", "vista_kind", "terminal", "packer" },
       colors = { hint = "orange", error = "#ff0000" },
