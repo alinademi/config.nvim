@@ -1,0 +1,2 @@
+-- we are using this file to modify the default settings of plugins
+-- This is a good place to put our own custom keybindings
