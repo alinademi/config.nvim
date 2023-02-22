@@ -6,8 +6,7 @@ return {
   'projekt0n/github-nvim-theme',
   config = function()
     require('github-theme').setup({
-      theme_style = "dark",
-      version = "*",
+      theme_style = "dark_default",
       function_style = "italic",
       sidebars = { "qf", "vista_kind", "terminal", "packer" },
       colors = { hint = "orange", error = "#ff0000" },
