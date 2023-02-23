@@ -9,7 +9,11 @@ return {
       theme_style = "dark_default",
       function_style = "italic",
       sidebars = { "qf", "vista_kind", "terminal", "packer" },
-      colors = { hint = "orange", error = "#ff0000" },
+            colors = {
+                hint = "orange",
+                error = "#ff0000",
+                functions = "cyan",
+       },
       overrides = function(c)
         return {
           htmlTag = { fg = c.red, bg = "#111a24", sp = c.hint, style = "underline" },
@@ -20,5 +24,6 @@ return {
     })
   end,
   -- Set the priority value to a higher value to ensure that the colorscheme is loaded before other plugins
-  priority = 1000,
+    priority = 1000,
+    enabled = false,
 }
