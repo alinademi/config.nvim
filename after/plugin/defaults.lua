@@ -29,3 +29,11 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
       end
    end,
 })
+------------------------------
+-- ToggleTerm
+------------------------------
+-- open terminal everytime we start neovim
+vim.cmd [[
+   autocmd VimEnter * ++nested :ToggleTerm
+   autocmd BufWinLeave * ++nested :wincmd p | :ToggleTerm
+]]
