@@ -32,8 +32,8 @@ vim.g.netrw_list_hide = (vim.fn["netrw_gitignore#Hide"]()) .. [[,\(^\|\s\s\)\zs\
 ------------------------------
 -- ToggleTerm
 ------------------------------
--- open terminal everytime we start neovim
-vim.cmd [[
-   autocmd VimEnter * ++nested :ToggleTerm
-   autocmd BufWinLeave * ++nested :wincmd p | :ToggleTerm
-]]
+-- open terminal everytime we start neovim, caveat: it also focuses on the terminal
+-- vim.cmd [[
+--    autocmd VimEnter * ++nested :ToggleTerm  | wincmd
+--    autocmd BufWinLeave * ++nested :wincmd p | :ToggleTerm
+-- ]]
