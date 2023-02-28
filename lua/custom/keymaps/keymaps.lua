@@ -28,8 +28,8 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<C-tab>", ":bnext<CR>", opts)
+-- keymap("n", "<C-S-tab>", ":bprevious<CR>", opts)
 
 -- Visual Block --
 -- Move text up and down
