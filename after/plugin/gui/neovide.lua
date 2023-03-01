@@ -9,7 +9,7 @@ if vim.g.neovide then
    vim.g.neovide_background_color = "#0f1117" .. alpha()
    vim.opt.guifont = { "JetBrainsMono Nerd Font", "h20" }
    vim.g.neovide_scale_factor = 1.3
-   vim.opt.linespace = 3
+   vim.opt.linespace = 5
    vim.g.neovide_confirm_quit = true
    vim.g.neovide_input_use_logo = 1 -- enable use of the logo (cmd) key
    vim.keymap.set('n', '<D-s>', ':w<CR>') -- Save
@@ -18,6 +18,13 @@ if vim.g.neovide then
    vim.keymap.set('v', '<D-v>', '"+P') -- Paste visual mode
    vim.keymap.set('c', '<D-v>', '<C-R>+') -- Paste command mode
    vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
+   -- blinking cursor
+   vim.cmd [[
+      autocmd GUIEnter * set guicursor=a:blinkon0
+      autocmd GUIEnter * set guicursor+=i:ver25-blinkon0
+      autocmd GUIEnter * set guicursor+=r:hor20
+      autocmd GUIEnter * set guicursor+=c:hor20
+   ]]
 end
 
 -- Allow clipboard copy paste in neovim
