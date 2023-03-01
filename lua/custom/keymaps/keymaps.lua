@@ -38,30 +38,11 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
-------------------------------
--- NeoTree
-------------------------------
--- -- Rreveal NoeTree with ctrl+n
--- vim.api.nvim_set_keymap("n", "<C-n>", ":NeoTreeShow<CR>", { noremap = true, silent = true })
+-- map :vx to :Vexplore
+keymap("n", ":vx", ":Vexplore<CR>", opts)
 
--- -- reveals neo tree with focus on file tree every time we start neovim.
--- vim.api.nvim_create_augroup("neotree_autoopen", { clear = true })
--- vim.api.nvim_create_autocmd("BufWinEnter", {
---    desc = "Open neo-tree on enter",
---    group = "neotree_autoopen",
---    callback = function()
---       if not vim.g.neotree_opened then
---          vim.cmd "Neotree show" -- for focus on the buffer instead, use "NeoTree show".
---          vim.g.neotree_opened = true
---       end
---    end,
--- })
-
-------------------------------
--- ToggleTerm
-------------------------------
--- open terminal everytime we start neovim, caveat: it also focuses on the terminal
--- vim.cmd [[
---    autocmd VimEnter * ++nested :ToggleTerm  | wincmd
---    autocmd BufWinLeave * ++nested :wincmd p | :ToggleTerm
--- ]]
+-- Telescope --
+-- telescope_file_browser
+keymap("n", "<leader>fb", ":Telescope file_browser<CR>", opts)
+-- open file_browser with the path of the current buffer
+keymap("n", "<leader>fp", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
