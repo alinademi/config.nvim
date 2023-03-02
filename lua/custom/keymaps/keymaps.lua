@@ -14,7 +14,11 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<leader>lx", ":Lexplore 20<cr>", opts)
+-- :vx to :Vexplore
+-- :Lexplore or :Lex to :lx
+keymap("n", ":vx", ":Vexplore<CR>", opts)
+keymap("n", ":lx", ":Lexplore 20<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-S-Up>", ":resize +2<CR>", opts)
@@ -37,9 +41,6 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
--- map :vx to :Vexplore
-keymap("n", ":vx", ":Vexplore<CR>", opts)
 
 -- Telescope --
 -- telescope_file_browser
