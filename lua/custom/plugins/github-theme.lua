@@ -5,11 +5,26 @@
 return {
   'projekt0n/github-nvim-theme',
   config = function()
+    -- Example config in Lua
     require('github-theme').setup({
-      theme_style = "dark_default",
-      -- the background color of the whole editor
-      function_style = "italic",
-      sidebars = { "qf", "vista_kind", "terminal", "packer" },
+      options = {
+        transparent = false,
+        hide_end_of_buffer = true,
+        hide_nc_statusline = true,
+        styles = {
+          comments = 'Italic',
+          functions = 'NONE',
+          keywords = 'Bold',
+          variables = 'Underline',
+        },
+        darken = {
+          floats = true,
+          sidebars = {
+            enable = true,
+            list = { 'qf', 'vista_kind', 'terminal', 'packer' },
+          },
+        },
+      },
       colors = {
         bg = "#111a24",
         hint = "orange",
@@ -29,14 +44,18 @@ return {
           json_label = '#79c0ff',
         },
       },
+      -- Overwrite the highlight groups
       overrides = function(c)
         return {
-          htmlTag = { fg = c.red, bg = "#111a24", sp = c.hint, style = "underline" },
-          DiagnosticHint = { link = "LspDiagnosticsDefaultHint" },
+          htmlTag = { fg = c.red, bg = '#282c34', sp = c.hint, style = 'underline' },
+          DiagnosticHint = { link = 'LspDiagnosticsDefaultHint' },
+          -- this will remove the highlight groups
           TSField = {},
         }
-      end
+      end,
     })
+
+    vim.cmd('colorscheme github_dark')
   end,
   -- Set the priority value to a higher value to ensure that the colorscheme is loaded before other plugins
   priority = 1000,
