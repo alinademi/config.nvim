@@ -3,3 +3,6 @@ test.sh
 .luarc.json
 nvim
 lazy-lock.json
+.Ds_Store
+Icon?
+Thumbs.db
