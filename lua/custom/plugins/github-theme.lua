@@ -59,7 +59,7 @@ return {
       -- end,
     })
 
-    vim.cmd('colorscheme github_dark')
+    vim.cmd('colorscheme github_dark_tritanopia')
   end,
   -- Set the priority value to a higher value to ensure that the colorscheme is loaded before other plugins
   priority = 1000,
