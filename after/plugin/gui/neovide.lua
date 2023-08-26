@@ -37,7 +37,7 @@ if vim.g.neovide then
    vim.g.neovide_transparency = 0.9
    vim.g.transparency = 1.0
    vim.g.neovide_background_color = "#23283B" .. alpha()
-   vim.g.neovide_scale_factor = 1.3
+   vim.g.neovide_scale_factor = 1.1
    vim.opt.linespace = 5
    vim.g.neovide_confirm_quit = true
    vim.g.neovide_input_use_logo = 1            -- enable use of the logo (cmd) key
